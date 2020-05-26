@@ -1,0 +1,38 @@
+@import "../../utilities";
+
+.button {
+  border: none;
+  background: $color-primary-cyan;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  opacity: 1;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: hsl(179, 56%, 75%);
+  }
+}
+
+.small {
+  width: 105px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.large {
+  width: 200px;
+  height: 55px;
+  border-radius: 35px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-left: 0;
+}
+
+@media (max-width: 979px) {
+  .large {
+    margin: 2rem auto;
+  }
+}
