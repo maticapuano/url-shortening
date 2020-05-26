@@ -1,0 +1,134 @@
+@import "../../utilities";
+
+.main-footer {
+  position: relative;
+  height: 310px;
+  background: $color-dark-violet;
+  display: flex;
+  align-items: center;
+  .footer-title {
+    margin-top: -0.5rem;
+    width: 380px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .footer-links {
+    width: 190px;
+    &:nth-child(4) {
+      width: 175px;
+    }
+    ul {
+      color: #fff;
+      list-style: none;
+      font-size: 1rem;
+      li {
+        font-size: 1rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+
+        &:not(:first-child) {
+          opacity: 0.6;
+          padding-bottom: 0.5rem;
+          font-weight: 500;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+            color: $color-primary-cyan;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    a {
+      color: transparent;
+    }
+    .icon {
+      display: inline-block;
+      background-color: #fff;
+      width: 24px;
+      height: 24px;
+      margin-left: 1.2rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-primary-cyan;
+      }
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    .facebook-icon {
+      mask: url("../../shared/images/icon-facebook.svg");
+    }
+    .twitter-icon {
+      height: 20px;
+      mask: url("../../shared/images/icon-twitter.svg");
+    }
+    .pinterest-icon {
+      mask: url("../../shared/images/icon-pinterest.svg");
+    }
+    .instagram-icon {
+      mask: url("../../shared/images/icon-instagram.svg");
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  margin: auto;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: $color-primary-cyan;
+}
+
+@media (min-width: 995px) and (max-width: 1165px) {
+  .main-footer {
+    .social-icons {
+      .icon {
+        &:last-child {
+          max-width: 24px;
+          margin: 0;
+          margin-right: 2rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 994px) {
+  .main-footer {
+    height: max-content;
+    text-align: center;
+    padding: 1rem 0;
+    .flex {
+      align-items: center;
+      flex-direction: column;
+    }
+    .footer-title {
+      width: max-content;
+      padding: 3rem 0;
+    }
+    .footer-links {
+      width: max-content;
+      ul {
+        padding-bottom: 2rem;
+      }
+    }
+
+    .social-icons {
+      padding-bottom: 3rem;
+    }
+  }
+}

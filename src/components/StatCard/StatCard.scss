@@ -1,0 +1,84 @@
+@import "../../utilities";
+
+.card {
+  position: relative;
+  width: 348px;
+  height: 270px;
+  background: #fff;
+  border-radius: 12px;
+
+  align-self: center;
+
+  &:first-child {
+    align-self: flex-start;
+  }
+
+  &:nth-child(5) {
+    align-self: flex-end;
+  }
+
+  .card-image {
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 2.5rem;
+    background: $color-primary-violet;
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    img {
+      margin: auto;
+      padding: 20px;
+    }
+  }
+
+  .card-title {
+    margin-top: 55px;
+    padding: 0.5rem 2rem;
+    color: $color-dark-violet;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .card-body {
+    color: $color-grayish-violet;
+    padding: 0 2rem;
+    font-size: 15px;
+    line-height: 1.7rem;
+  }
+}
+
+.brand-recog {
+  align-self: flex-start;
+}
+
+.detailed-records {
+  align-self: center;
+}
+
+.fully-custom {
+  align-self: flex-end;
+}
+
+@media (max-width: 1159px) {
+  .card {
+    text-align: center;
+
+    &:first-child {
+      align-self: center;
+    }
+
+    &:nth-child(5) {
+      align-self: center;
+    }
+
+    .card-image {
+      top: -2.5rem;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}

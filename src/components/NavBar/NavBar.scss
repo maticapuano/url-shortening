@@ -1,0 +1,95 @@
+@import "../../utilities";
+
+.main-nav {
+  margin: 45px 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 34px;
+    font-weight: 700;
+    color: $color-dark-blue;
+    padding-right: 13px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-grayish-violet;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .link-item {
+    padding-left: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary-violet;
+    }
+  }
+
+  .menu {
+    padding-top: 10px;
+    align-self: center;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.menu-list {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 375px;
+  width: 90vw;
+  border: none;
+  border-radius: 12px;
+  background: $color-primary-violet;
+  z-index: 20;
+  ul {
+    padding-top: 1.5rem;
+    list-style: none;
+    li {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .small {
+    font-size: 1rem;
+  }
+
+  hr {
+    height: 1px;
+    margin: auto;
+    width: 90%;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 979px) {
+  .main-nav {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    .nav-links {
+      display: none;
+    }
+    .right-buttons {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+  }
+}

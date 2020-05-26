@@ -1,0 +1,73 @@
+@import "../../utilities";
+
+.header-content {
+  display: flex;
+  padding-top: 2rem;
+  .header-text {
+    padding-top: 4rem;
+    min-width: 670px;
+    font-size: 5rem;
+    color: $color-dark-blue;
+    line-height: 5.5rem;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1150px) {
+  .header-content {
+    .header-text {
+      padding-top: 1rem;
+      min-width: 620px;
+    }
+    .header-image {
+      align-self: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .header-content {
+    padding-top: 1rem;
+    margin: auto;
+    flex-direction: column-reverse;
+    .header-text {
+      min-width: 320px;
+      max-width: 90%;
+      padding-top: 2rem;
+      margin: auto;
+      text-align: center;
+    }
+    .lead {
+      padding-top: 1rem;
+    }
+    .header-image {
+      margin: auto;
+      img {
+        height: 400px;
+        width: auto;
+      }
+    }
+    .center {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 808px) {
+  .header-content {
+    .header-text {
+      font-size: 2.3rem;
+      line-height: 2.8rem;
+    }
+    .lead {
+      font-size: 1rem;
+      line-height: 1.7rem;
+    }
+    .large {
+      margin: 1rem auto;
+    }
+  }
+}
